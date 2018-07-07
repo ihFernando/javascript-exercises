@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function reverseInt(int) {
+      //Declara as variáveis
+      let reverse = [];
+      let x       = int.toString();
+
+      //Cria o laço
+      for( i = x.length; i > 0; i-- ) {
+        //Verifica se é igual a -, se for puxa para o top
+        if( x[ i - 1 ] === '-' ) {
+          reverse.unshift('-');
+        } else {
+          //Puxa os demais elementos de forma inversa
+          ( x[ i - 1 ] !== '0' ) ? reverse.push(x[ i - 1 ]) : false;
+        }
+      }
+      //Retorna a palavra
+      return reverse.join("");
+    }
+
+//    reverseInt(-220);
+
+function Person(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eye;
+}
+
+function Queue() {
+  let vetor = [];
+
+  this.add = function( x ) {
+    vetor.push( x );
+  };
+  this.remove = function( x ) {
+    return vetor.shift( );
+  };
+}
+
+  var q = new Queue();
+  q.add(1);
+  q.add(15);
+  q.add(13);
+  q.add(9);
+
+  </script>
+</body>
+</html>
